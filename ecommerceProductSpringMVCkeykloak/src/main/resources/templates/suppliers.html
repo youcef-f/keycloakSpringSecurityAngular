@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="Layout">
+<head>
+<title>index</title>
+<meta charset="utf-8">
+</head>
+<body>
+
+	<div layout:fragment="content">
+
+		<H2>accessible uniquement à ceux attentifiés et ayant le role
+			"app-manager"</H2>
+			<br>
+		<div class="container">
+			<table class="table">
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Email</th>
+				</tr>
+				<tr th:each="s:${ModelSuppliers}">
+					<td th:text="${s.id}"></td>
+					<td th:text="${s.name}"></td>
+					<td th:text="${s.email}"></td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

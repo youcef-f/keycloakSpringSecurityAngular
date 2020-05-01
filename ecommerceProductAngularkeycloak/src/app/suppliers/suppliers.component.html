@@ -1,0 +1,16 @@
+<H2>accessible uniquement à ceux attentifiés et ayant le role "app-manager"</H2>
+<br>
+<div class="text-danger" *ngIf="errorSuppliers">{{errorSuppliers}}</div>
+<table class="table" *ngIf="suppliers">
+  <tr>
+    <th>ID</th><th>Name</th><th>Email</th>
+  </tr>
+  <tr *ngFor="let p of suppliers">
+    <td>{{p.id}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.email}}</td>
+
+  </tr>
+</table>
+
+
